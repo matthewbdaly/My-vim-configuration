@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule ".vim/bundle/phpdoc"]
+	path = .vim/bundle/phpdoc
+	url = https://github.com/vexxor/phpdoc.vim.git
