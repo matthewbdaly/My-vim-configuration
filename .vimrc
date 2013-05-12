@@ -13,7 +13,7 @@ set mouse-=a
 set t_Co=256
 
 "Code folding
-set foldmethod=syntax
+set foldmethod=manual
 
 "Tabs and spacing
 set autoindent
