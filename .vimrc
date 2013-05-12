@@ -35,7 +35,10 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set ofu=syntaxcomplete#Complete
 
 "Set Python compiler to pylint
-autocmd FileType python compiler pylint
+"autocmd FileType python compiler pylint
+
+"Flake8 integration
+autocmd BufWritePost *.py call Flake8()
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
