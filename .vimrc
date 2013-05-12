@@ -34,6 +34,9 @@ set diffopt +=iwhite
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set ofu=syntaxcomplete#Complete
 
+"Set Python compiler to pylint
+autocmd FileType python compiler pylint
+
 " Add the virtualenv's site-packages to vim path
 py << EOF
 import os.path
