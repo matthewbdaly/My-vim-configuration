@@ -17,7 +17,7 @@ set foldmethod=manual
 
 "Tabs and spacing
 set autoindent
-set smartindent
+set cindent
 set tabstop=4
 set expandtab
 set shiftwidth=4
@@ -38,7 +38,12 @@ set ofu=syntaxcomplete#Complete
 "autocmd FileType python compiler pylint
 
 "Flake8 integration
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
+
+" Disable Syntastic for HTML
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html'] }
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
