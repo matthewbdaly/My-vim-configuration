@@ -30,6 +30,9 @@ set ignorecase
 set smartcase
 set diffopt +=iwhite
 
+" Use CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 "Completion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set ofu=syntaxcomplete#Complete
