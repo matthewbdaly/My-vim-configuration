@@ -36,6 +36,10 @@ nnoremap tn :tabnext<CR>
 
 " Use CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': [],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
 
 " Vexplore
 " Toggle Vexplore with Ctrl-E
