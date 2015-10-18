@@ -30,64 +30,14 @@ set ignorecase
 set smartcase
 set diffopt +=iwhite
 
-" Use CtrlP
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': [],
-  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
-  \ }
-
-" Vexplore
-" Toggle Vexplore with Ctrl-E
-function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-      let expl_win_num = bufwinnr(t:expl_buf_num)
-      if expl_win_num != -1
-          let cur_win_nr = winnr()
-          exec expl_win_num . 'wincmd w'
-          close
-          exec cur_win_nr . 'wincmd w'
-          unlet t:expl_buf_num
-      else
-          unlet t:expl_buf_num
-      endif
-  else
-      exec '1wincmd w'
-      Vexplore16 
-      let t:expl_buf_num = bufnr("%")
-  endif
-endfunction
-map <silent> <C-E> :call ToggleVExplorer()<CR>
-let g:netrw_browse_split=4
-let g:netrw_altv = 1
-set autochdir
-
 "Completion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set ofu=syntaxcomplete#Complete
-
-"Set Python compiler to pylint
-"autocmd FileType python compiler pylint
-
-"Flake8 integration
-"autocmd BufWritePost *.py call Flake8()
 
 " Disable Syntastic for HTML
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
-
-" Add the virtualenv's site-packages to vim path
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
 
 "Spelling
 set spell
@@ -104,3 +54,11 @@ highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 map <F6><Esc>setlocal spell spelllang=en_gb<CR>
 map<F7><Esc>setlocal nospell<CR>
+
+"Syntax highlighting in Markdown
+au BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['bash=sh', 'css', 'django', 'handlebars', 'javascript', 'js=javascript', 'json=javascript', 'perl', 'php', 'python', 'ruby', 'sass', 'xml', 'html', 'vim']
+
+"JSX support
+let g:syntastic_javascript_checkers = ['eslint']
+let g:jsx_ext_required = 0
