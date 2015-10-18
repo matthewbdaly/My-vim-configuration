@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/grunt"]
 	path = .vim/bundle/grunt
 	url = git://github.com/mklabs/grunt.vim.git
+[submodule ".vim/bundle/vim-jsx"]
+	path = .vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
