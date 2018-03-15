@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/php.vim"]
 	path = .vim/bundle/php.vim
 	url = git@github.com:StanAngeloff/php.vim.git
+[submodule ".vim/bundle/vim-easy-align"]
+	path = .vim/bundle/vim-easy-align
+	url = git@github.com:junegunn/vim-easy-align.git
