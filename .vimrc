@@ -9,6 +9,7 @@ filetype plugin indent on
 set nocp
 set ruler
 set wildmenu
+set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 set mouse-=a
 set t_Co=256
 
