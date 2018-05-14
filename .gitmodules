@@ -15,16 +15,16 @@
 	url = https://github.com/airblade/vim-gitgutter.git
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
+	url = https://github.com/godlygeek/tabular.git
 [submodule ".vim/bundle/handlebars"]
 	path = .vim/bundle/handlebars
-	url = git://github.com/nono/vim-handlebars.git
+	url = https://github.com/nono/vim-handlebars.git
 [submodule ".vim/bundle/vim-jade"]
 	path = .vim/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
 [submodule ".vim/bundle/grunt"]
 	path = .vim/bundle/grunt
-	url = git://github.com/mklabs/grunt.vim.git
+	url = https://github.com/mklabs/grunt.vim.git
 [submodule ".vim/bundle/vim-jsx"]
 	path = .vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
@@ -60,7 +60,7 @@
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
 [submodule ".vim/bundle/php.vim"]
 	path = .vim/bundle/php.vim
-	url = git@github.com:StanAngeloff/php.vim.git
+	url = https://github.com/StanAngeloff/php.vim.git
 [submodule ".vim/bundle/vim-easy-align"]
 	path = .vim/bundle/vim-easy-align
-	url = git@github.com:junegunn/vim-easy-align.git
+	url = https://github.com/junegunn/vim-easy-align.git
